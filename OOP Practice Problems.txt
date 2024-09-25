@@ -116,7 +116,7 @@
   - `Animal: Dog`
 
 ---
-
+next day start from here ->
 ### Single Inheritance
 - **Short Explanation:** In single inheritance, a class inherits from only one base class.
 - **Practice Problem:** Create a class `Vehicle` and another class `Car` that inherits from `Vehicle`.
