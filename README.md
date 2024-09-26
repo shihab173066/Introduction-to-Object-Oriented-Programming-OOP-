@@ -1,1 +1,361 @@
 # Introduction-to-Object-Oriented-Programming-OOP-
+
+◼️ Introduction to Object-Oriented Programming (OOP)
+◼️ Key Concepts of OOP
+◼️ OOP Use Case
+◼️ Creating Classes and Objects
+◼️ Class Variables and Methods
+◼️ Constructors Without Parameter
+◼️ Constructors With Parameter
+◼️ Change Class Variable Using Constructor Params
+◼️ Instance Variables and Methods
+◼️ Inheritance
+◼️ Single Inheritance
+◼️ Multiple Inheritance
+◼️ Multilevel Inheritance
+◼️ Constructor at inheritance
+◼️ Constructor: When Parent class has, but the child class has not
+◼️ Constructor: When child class has, but the parent class has not
+◼️ Constructor: When Parent and child both has contractor
+◼️ Accessing the Parent's Constructor
+◼️ Static Properties in inheritance situations
+◼️ If Parent has static properties, child can access as it is like parent
+◼️ If Child has static properties, Parent can't access as it is like child
+◼️ How child can access parents static and non-static properties
+◼️ Method Overriding
+◼️ Method overloading
+◼️ Method Overloading Using Default Arguments
+◼️ Method Overloading Using Variable-Length Arguments
+◼️ Abstract class in python
+◼️ Key Points of Abstract Classes
+◼️ Access modifiers
+◼️ Public (No leading underscore)
+◼️ Protected (Single leading underscore:_ )
+◼️ Private (Double leading underscore:**__ )
+◼️ Getter Setter
+◼️ Encapsulation
+◼️ Polymorphism
+◼️ Key Points of Polymorphism
+
+
+### Introduction to Object-Oriented Programming (OOP)
+- **Short Explanation:** OOP is a programming paradigm based on the concept of "objects", which can contain data and methods.
+- **Practice Problem:** Create a basic class for a car that has attributes like `make`, `model`, and `year` and methods to start and stop the car.
+- **Test Case Output:** 
+  - `Car make: Toyota, Model: Corolla, Year: 2022`
+  - `Car started`
+
+---
+
+### Key Concepts of OOP
+- **Short Explanation:** The key OOP concepts include encapsulation, inheritance, abstraction, and polymorphism.
+- **Practice Problem:** Demonstrate encapsulation by creating a class with private attributes and public getter and setter methods.
+- **Test Case Output:** 
+  - `Salary: 5000`
+
+---
+
+### OOP Use Case
+- **Short Explanation:** OOP is used in situations where we model real-world entities with properties and behaviors, like bank systems or inventory management.
+- **Practice Problem:** Build a class for a library system with attributes for book name, author, and methods for borrowing and returning books.
+- **Test Case Output:** 
+  - `Book borrowed: Harry Potter by J.K. Rowling`
+
+---
+
+### Creating Classes and Objects
+- **Short Explanation:** Classes are blueprints for objects. Objects are instances of classes.
+- **Practice Problem:** Create a class `Person` with name and age, and instantiate two objects with different attributes.
+- **Test Case Output:** 
+  - `Name: Alice, Age: 30`
+
+---
+
+### Class Variables and Methods
+- **Short Explanation:** Class variables are shared across all instances of the class, while instance variables are unique to each instance.
+- **Practice Problem:** Create a class with a class variable counting the number of objects created.
+- **Test Case Output:** 
+  - `Total persons created: 2`
+
+---
+
+### Constructors Without Parameter
+- **Short Explanation:** A constructor is a special method used to initialize objects. Without parameters, it sets default values.
+- **Practice Problem:** Create a class `Student` that sets a default name and age if none are provided.
+- **Test Case Output:** 
+  - `Default Name: John, Age: 18`
+
+---
+
+### Constructors With Parameter
+- **Short Explanation:** A constructor with parameters allows you to initialize an object with specific values.
+- **Practice Problem:** Create a class `Employee` that takes name and salary as parameters in the constructor.
+- **Test Case Output:** 
+  - `Employee: Alice, Salary: 4000`
+
+---
+
+### Change Class Variable Using Constructor Params
+- **Short Explanation:** Class variables can be modified using constructor parameters, impacting all instances.
+- **Practice Problem:** Create a class with a class variable for a company name, and change it using constructor parameters.
+- **Test Case Output:** 
+  - `Company: Google`
+
+---
+
+### Instance Variables and Methods
+- **Short Explanation:** Instance variables are tied to a specific object, and instance methods operate on them.
+- **Practice Problem:** Create a class `Dog` with instance variables `name` and `breed` and a method `bark()`.
+- **Test Case Output:** 
+  - `Dog Name: Rex, Breed: Bulldog`
+
+---
+
+### Inheritance
+- **Short Explanation:** Inheritance allows a class to inherit attributes and methods from another class.
+- **Practice Problem:** Create a base class `Animal` and a derived class `Dog` that inherits from `Animal`.
+- **Test Case Output:** 
+  - `Animal: Dog`
+
+---
+
+### Single Inheritance
+- **Short Explanation:** In single inheritance, a class inherits from only one base class.
+- **Practice Problem:** Create a class `Vehicle` and another class `Car` that inherits from `Vehicle`.
+- **Test Case Output:** 
+  - `Car is a type of Vehicle`
+
+---
+
+### Multiple Inheritance
+- **Short Explanation:** Multiple inheritance occurs when a class inherits from more than one base class.
+- **Practice Problem:** Create two classes `Teacher` and `Student`, and create a `TeachingAssistant` class that inherits from both.
+- **Test Case Output:** 
+  - `TeachingAssistant has both teacher and student roles`
+
+---
+
+### Multilevel Inheritance
+- **Short Explanation:** In multilevel inheritance, a class is derived from a class which is also derived from another class.
+- **Practice Problem:** Create a class `Person`, a class `Employee` that inherits from `Person`, and a class `Manager` that inherits from `Employee`.
+- **Test Case Output:** 
+  - `Manager is a Person`
+
+---
+
+### Constructor at Inheritance
+- **Short Explanation:** Child classes can inherit the constructor of the parent class and extend or override its functionality.
+- **Practice Problem:** Create a base class `Person` with a constructor, and a child class `Employee` that calls the parent's constructor.
+- **Test Case Output:** 
+  - `Person constructor called`
+
+---
+
+### Constructor: When Parent class has, but the child class has not
+- **Short Explanation:** If a child class does not have its own constructor, it automatically uses the parent's constructor.
+- **Practice Problem:** Create a base class `Person` with a constructor, and a child class `Employee` without a constructor.
+- **Test Case Output:** 
+  - `Employee inherits Person constructor`
+
+---
+
+### Constructor: When child class has, but the parent class has not
+- **Short Explanation:** If a child class has its own constructor, it does not need to rely on the parent's constructor.
+- **Practice Problem:** Create a class `Parent` without a constructor and a class `Child` with its own constructor.
+- **Test Case Output:** 
+  - `Child constructor only`
+
+---
+
+### Constructor: When Parent and child both have constructor
+- **Short Explanation:** When both classes have constructors, the child class can call the parent's constructor using `super()`.
+- **Practice Problem:** Create a `Parent` class with a constructor, and a `Child` class with its own constructor that calls the parent’s constructor.
+- **Test Case Output:** 
+  - `Child constructor called after Parent constructor`
+
+---
+
+### Accessing the Parent's Constructor
+- **Short Explanation:** Use `super()` in the child class to access the parent's constructor.
+- **Practice Problem:** Create a class `Person` and a class `Employee`, and use `super()` in the `Employee` class constructor.
+- **Test Case Output:** 
+  - `Parent constructor called`
+
+--->
+
+### Static Properties in Inheritance Situations
+- **Short Explanation:** Static properties are shared across instances and can be accessed without instantiating the class.
+- **Practice Problem:** Create a base class with a static method, and call it from a derived class without instantiating either.
+- **Test Case Output:** 
+  - `Static method called`
+
+---
+
+### If Parent has static properties, child can access as it is like parent
+- **Short Explanation:** The child class can access static properties of the parent class as if they belong to the child.
+- **Practice Problem:** Create a static method in the parent class, and access it through the child class.
+- **Test Case Output:** 
+  - `Child class accessing Parent static method`
+
+---
+
+### If Child has static properties, Parent can't access as it is like child
+- **Short Explanation:** Parent classes cannot access static properties of child classes directly.
+- **Practice Problem:** Create a static property in the child class, and show that the parent class cannot access it.
+- **Test Case Output:** 
+  - `Parent cannot access child static property`
+
+---
+
+### How Child can access Parent's static and non-static properties
+- **Short Explanation:** The child class can access the parent's static properties using `ClassName.property` and non-static properties through inheritance.
+- **Practice Problem:** Create a parent class with static and non-static properties, and access them in the child class.
+- **Test Case Output:** 
+  - `Child accessing Parent's properties`
+
+---
+
+### Method Overriding
+- **Short Explanation:** Method overriding allows a child class to provide a specific implementation of a method already defined in the parent class.
+- **Practice Problem:** Create a `Parent` class with a `speak()` method, and override it in the `Child` class.
+- **Test Case Output:** 
+  - `Child's speak method`
+
+---
+
+### Method Overloading
+- **Short Explanation:** Method overloading allows multiple methods with the same name but different parameters.
+- **Practice Problem:** Create a class with overloaded `add()` methods that work with both two and three parameters.
+- **Test Case Output:** 
+  - `Addition result: 10 (with two params), 15 (with three params)`
+
+---
+
+### Method Overloading Using Default Arguments
+- **Short Explanation:** Default arguments allow method overloading by providing default values for parameters.
+- **Practice Problem:** Create a method `calculate()` that can work with one or two parameters by using default arguments.
+- **Test Case Output:** 
+  - `Calculated value with one argument: 10`
+  - `Calculated value with two arguments: 20`
+
+---
+
+### Method Overloading Using Variable-Length Arguments
+- **Short Explanation:** Variable-length arguments allow a method to accept an arbitrary number of parameters.
+- **Practice Problem:** Create a method `add()` that can take multiple parameters using `*args`.
+- **Test Case Output:** 
+  - `Sum of numbers: 30`
+
+---
+
+### Abstract Class in Python
+- **Short Explanation:** An abstract class is a blueprint for other classes and cannot be instantiated. It contains abstract methods that must be implemented in child classes.
+- **Practice Problem:** Create an abstract class `Shape` with an abstract method `area()`, and implement it in derived classes like `Circle` and `Square`.
+- **Test Case Output:** 
+  - `Area of circle: 50.27`
+
+---
+
+### Key Points of Abstract Classes
+1. Cannot be instantiated directly.
+2. Must have at least one abstract method.
+3. Forces subclasses to provide implementations for abstract methods.
+4. Allows the use of `@abstractmethod` decorator from the `abc` module.
+
+**Practice Problem:**  
+Create an abstract class `Vehicle` with an abstract method `drive()`. Create subclasses `Car` and `Bike` that implement `drive()` method uniquely.
+
+**Test Case:**  
+Input: `Car: "Driving a car", Bike: "Riding a bike"`  
+Output: `Car: Driving a car, Bike: Riding a bike`
+
+---
+
+### Access Modifiers
+Access modifiers control how class variables or methods can be accessed. Python uses conventions for access control.
+
+---
+
+### Public (No leading underscore)
+A **public** member (variables or methods) is accessible from anywhere inside or outside the class. No leading underscore is used for public members.
+
+**Practice Problem:**  
+Create a class `Employee` with a public attribute `name`. Set the `name` publicly and print it.
+
+**Test Case:**  
+Input: `name = "John"`  
+Output: `John`
+
+---
+
+### Protected (Single leading underscore: `_`)
+A **protected** member is indicated by a single leading underscore (`_`) and is meant to be used within the class and its subclasses, but not meant to be accessed directly from outside.
+
+**Practice Problem:**  
+Create a class `Employee` with a protected attribute `_salary`. In a subclass, modify the `_salary` and access it within the class.
+
+**Test Case:**  
+Input: `_salary = 5000`  
+Output: `Modified salary: 7000`
+
+---
+
+### Private (Double leading underscore: `__`)
+A **private** member is indicated by a double leading underscore (`__`). It is only accessible within the class where it is defined, and it undergoes name mangling to prevent external access.
+
+**Practice Problem:**  
+Create a class `BankAccount` with a private attribute `__balance`. Try to access and modify it both directly and via a public method.
+
+**Test Case:**  
+Input: `__balance = 10000, deposit 2000 via public method`  
+Output: `Access denied, balance after deposit: 12000`
+
+---
+
+### Getter Setter
+**Getter and Setter** methods are used to control access to class attributes, ensuring proper validation and encapsulation.
+
+**Practice Problem:**  
+Create a class `Student` with a private attribute `__grade`. Use getter and setter methods to access and modify the grade with validation (e.g., grades must be between 0 and 100).
+
+**Test Case:**  
+Input: `Set grade = 85, Set invalid grade = 110`  
+Output: `Valid grade: 85, Error: Invalid grade`
+
+---
+
+### Encapsulation
+**Encapsulation** is the concept of bundling data (attributes) and methods that operate on the data into a single unit or class. It restricts direct access to some of the object's components, which can help protect the integrity of the data.
+
+**Practice Problem:**  
+Create a class `Person` with private attributes `__name` and `__age`. Use getter and setter methods to modify these attributes and prevent invalid age values.
+
+**Test Case:**  
+Input: `Set name: "Alice", Set age: 25, Set invalid age: -5`  
+Output: `Name: Alice, Age: 25, Error: Invalid age`
+
+---
+
+### Polymorphism
+**Polymorphism** allows different classes to implement the same method in different ways. It enables a common interface for different types of objects.
+
+**Practice Problem:**  
+Create a class `Animal` with a method `speak()`. Create subclasses `Dog` and `Cat` that implement `speak()` differently.
+
+**Test Case:**  
+Input: `Dog speaks, Cat speaks`  
+Output: `Dog: Woof! Cat: Meow!`
+
+---
+
+### Key Points of Polymorphism
+1. Polymorphism allows different classes to define the same method in their own way.
+2. It enables method overloading and method overriding.
+3. Supports code reusability and flexibility.
+
+**Practice Problem:**  
+Create a function that accepts objects of different types (e.g., `Dog`, `Cat`, and `Cow`) and calls their `speak()` method without checking their type.
+
+**Test Case:**  
+Input: `Dog speaks, Cat speaks, Cow speaks`  
+Output: `Dog: Woof!, Cat: Meow!, Cow: Moo!`
